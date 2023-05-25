@@ -1,0 +1,47 @@
+.histogram {
+    height: 300px; /* Set the desired height for the chart */
+  }
+  main{
+    padding:0;
+    margin:0;
+    width: 100%;
+    
+  }
+
+  .tab-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dashboard-container {
+    display: flex;
+    flex-grow: 1;
+  }
+  
+  .chart-container {
+    flex-basis: 50%;
+    overflow: hidden;
+    padding-right: 10px; /* Optional: Add some spacing between the chart and table */
+  }
+  
+  .table-container {
+    flex-basis: 50%;
+    overflow-y: auto;
+  }
+  
+  .container {
+    display: flex;
+  }
+  
+  .chart-container {
+    flex: 0 0 40%; /* Adjust the width as needed */
+    padding-right: 10px;
+  }
+  
+  .table-container {
+    flex: 1;
+    overflow: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
