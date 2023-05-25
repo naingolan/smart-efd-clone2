@@ -1,0 +1,142 @@
+export default function getData(): any[] {
+  return [
+    {
+      Hours: 1,
+      Receipt: 115.4,
+      TotalInclusiveTax: 184.69,
+      TotalExclusiveTax: 120.21,
+    },
+    {
+      Hours: 2,
+      Receipt: 165.1,
+      TotalInclusiveTax: 95.55,
+      TotalExclusiveTax: 78.34,
+    },
+    {
+      Hours: 3,
+      Receipt: 182.9,
+      TotalInclusiveTax: 160.22,
+      TotalExclusiveTax: 115.87,
+    },
+    {
+      Hours: 4,
+      Receipt: 338.7,
+      TotalInclusiveTax: 198.3,
+      TotalExclusiveTax: 167.56,
+    },
+    {
+      Hours: 5,
+      Receipt: 111.4,
+      TotalInclusiveTax: 288.47,
+      TotalExclusiveTax: 142.89,
+    },
+    {
+      Hours: 6,
+      Receipt: 165.5,
+      TotalInclusiveTax: 224.69,
+      TotalExclusiveTax: 189.73,
+    },
+    {
+      Hours: 7,
+      Receipt: 46.8,
+      TotalInclusiveTax: 273.39,
+      TotalExclusiveTax: 78.12,
+    },
+    {
+      Hours: 8,
+      Receipt: 225.4,
+      TotalInclusiveTax: 259.15,
+      TotalExclusiveTax: 152.67,
+    },
+    {
+      Hours: 9,
+      Receipt: 227.7,
+      TotalInclusiveTax: 223.65,
+      TotalExclusiveTax: 162.44,
+    },
+    {
+      Hours: 10,
+      Receipt: 227.4,
+      TotalInclusiveTax: 147.61,
+      TotalExclusiveTax: 125.78,
+    },
+    {
+      Hours: 11,
+      Receipt: 180.1,
+      TotalInclusiveTax: 242.42,
+      TotalExclusiveTax: 97.56,
+    },
+    {
+      Hours: 12,
+      Receipt: 57,
+      TotalInclusiveTax: 227.12,
+      TotalExclusiveTax: 45.21,
+    },
+    {
+      Hours: 13,
+      Receipt: 110.9,
+      TotalInclusiveTax: 204.54,
+      TotalExclusiveTax: 92.87,
+    },
+    {
+      Hours: 14,
+      Receipt: 67.7,
+      TotalInclusiveTax: 244.73,
+      TotalExclusiveTax: 52.14,
+    },
+    {
+      Hours: 15,
+      Receipt: 81.8,
+      TotalInclusiveTax: 219.05,
+      TotalExclusiveTax: 63.89,
+    },
+    {
+      Hours: 16,
+      Receipt: 138.2,
+      TotalInclusiveTax: 193.13,
+      TotalExclusiveTax: 118.76,
+    },
+    {
+      Hours: 17,
+      Receipt: 59.7,
+      TotalInclusiveTax: 211.1,
+      TotalExclusiveTax: 51.27,
+    },
+    {
+      Hours: 18,
+      Receipt: 93.2,
+      TotalInclusiveTax: 172.32,
+      TotalExclusiveTax: 76.54,
+    },
+    {
+      Hours: 19,
+      Receipt: 75.6,
+      TotalInclusiveTax: 195.45,
+      TotalExclusiveTax: 62.78,
+    },
+    {
+      Hours: 20,
+      Receipt: 88.3,
+      TotalInclusiveTax: 208.17,
+      TotalExclusiveTax: 87.34,
+    },
+    {
+      Hours: 21,
+      Receipt: 112.4,
+      TotalInclusiveTax: 182.92,
+      TotalExclusiveTax: 95.76,
+    },
+    {
+      Hours: 22,
+      Receipt: 174.6,
+      TotalInclusiveTax: 209.84,
+      TotalExclusiveTax: 156.21,
+    },
+    {
+      Hours: 23,
+      Receipt: 128.7,
+      TotalInclusiveTax: 343,
+      TotalExclusiveTax: 432,
+    },
+  ];
+}

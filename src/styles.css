@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'lato', 'arial', sans-serif;
+}
+
+
+/* Define the custom color styles */
+:root {
+  --custom-primary: #FFA500;
+  --custom-accent: #008080;
+}
+
+/* Apply the custom colors to Angular Material components */
+.mat-primary {
+  color: var(--custom-primary);
+}
+
+.mat-accent {
+  color: var(--custom-accent);
+}
+
+.mat-primary-bg, .mat-accent-bg {
+  background-color: var(--custom-primary);
+}
+
+html, body{
+    padding:0;
+    margin:0;
+}

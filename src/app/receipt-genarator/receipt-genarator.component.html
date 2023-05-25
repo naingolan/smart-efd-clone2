@@ -1,0 +1,12 @@
+<!-- receipt-generator.component.html -->
+<div>
+    <h2>Receipt Preview</h2>
+    <button (click)="generatePDF(formData)">Download PDF</button>
+    <div #htmlData>
+      <p>Name: {{ formData.name }}</p>
+      <p>Email: {{ formData.email }}</p>
+      <p>Phone: {{ formData.phone }}</p>
+      <!-- Include other relevant receipt details here -->
+    </div>
+  </div>
+  

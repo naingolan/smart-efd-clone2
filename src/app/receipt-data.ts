@@ -1,0 +1,27 @@
+export const receiptData = [
+    { hour: '00', totalInclusiveTax: 250000 },
+    { hour: '01', totalInclusiveTax: 300000 },
+    { hour: '02', totalInclusiveTax: 180000 },
+    { hour: '03', totalInclusiveTax: 220000 },
+    { hour: '04', totalInclusiveTax: 320000 },
+    { hour: '05', totalInclusiveTax: 280000 },
+    { hour: '06', totalInclusiveTax: 400000 },
+    { hour: '07', totalInclusiveTax: 360000 },
+    { hour: '08', totalInclusiveTax: 500000 },
+    { hour: '09', totalInclusiveTax: 450000 },
+    { hour: '10', totalInclusiveTax: 380000 },
+    { hour: '11', totalInclusiveTax: 420000 },
+    { hour: '12', totalInclusiveTax: 520000 },
+    { hour: '13', totalInclusiveTax: 480000 },
+    { hour: '14', totalInclusiveTax: 390000 },
+    { hour: '15', totalInclusiveTax: 430000 },
+    { hour: '16', totalInclusiveTax: 370000 },
+    { hour: '17', totalInclusiveTax: 410000 },
+    { hour: '18', totalInclusiveTax: 290000 },
+    { hour: '19', totalInclusiveTax: 340000 },
+    { hour: '20', totalInclusiveTax: 260000 },
+    { hour: '21', totalInclusiveTax: 380000 },
+    { hour: '22', totalInclusiveTax: 330000 },
+    { hour: '23', totalInclusiveTax: 370000 }
+  ];
+  

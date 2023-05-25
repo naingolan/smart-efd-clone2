@@ -1,0 +1,39 @@
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #f9f9f9;
+  }
+  
+  .btn {
+    background-color: #337ab7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .btn-success {
+    background-color: #449d44;
+  }
+  
+  .btn-block {
+    display: block;
+    width: 100%;
+  }
+  

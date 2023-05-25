@@ -1,0 +1,34 @@
+<h2>SUMMARY REPORT</h2>
+<div class="table-container">
+
+<table class="custom-table">
+    <thead>
+      <tr>
+        <th><strong>ITEM</strong></th>
+        <ng-container *ngFor="let item of data">
+          <th>{{item.Hours }}</th>
+        </ng-container>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Receipt</strong></td>
+        <ng-container *ngFor="let item of data">
+          <td>{{ item.Receipt }}</td>
+        </ng-container>
+      </tr>
+      <tr>
+        <td><strong>Tax Inclusive</strong></td>
+        <ng-container *ngFor="let item of data">
+          <td>{{ item.TotalInclusiveTax }}</td>
+        </ng-container>
+      </tr>
+      <tr>
+        <td><strong>Tax Exclusive</strong></td>
+        <ng-container *ngFor="let item of data">
+          <td>{{ item.TotalExclusiveTax }}</td>
+        </ng-container>
+      </tr>
+    </tbody>
+  </table>
+</div>
