@@ -1,0 +1,34 @@
+.div-group{
+    display: flex;
+    justify-content: space-between;
+    border:none;
+}
+.div-group>*{
+    background-color:white;
+    border-width: 1px;
+    border-color: orange;
+    height: 200px;
+    border-style: solid;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column !important;
+    margin:0 5px;
+    width: 200px;
+}
+.div-group>*{
+    display: flex;
+    flex-direction: column;
+}
+mat-icon{
+    color:orange;
+    font-size:100px;
+    height: 100px;
+    width: 100px;
+}
+mat-button-toggle{
+    display: flex;
+    flex-direction: column;
+}
+mat-button-toggle:hover{
+    border-color: teal;
+}
