@@ -32,3 +32,56 @@
   justify-content: flex-end;
   margin-top: 16px;
 }
+
+
+main{
+    padding: 0;
+    margin:0;
+    
+}
+main>*{
+    height: 80px;
+    width: 90%;
+    margin:20px;
+    background-color: orange;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid orange;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); 
+
+}
+main>*>*{
+
+}
+button>*{
+    background-color: red;
+}
+div{
+    height: 100%;
+}
+.icon{
+    padding:12px 10px;
+}
+p{
+    padding:16px;
+    font-weight: 600;
+    color: black;
+    font-size: 18px;
+}
+.icon:nth-child(1){
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.icon:nth-child(3){
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color:white;
+    
+}
+mat-icon{
+    font-size: 50px;
+    height: 50px;
+    width: 50px;
+    color:black;
+}

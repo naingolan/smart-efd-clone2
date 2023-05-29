@@ -3,13 +3,14 @@ main{
   margin-bottom: 40px;
   display: flex;
   flex-direction: row;
-  padding:0 20px;
+  padding:0px;
+  
 }
 .button-comp{
-    background-color: teal;
     height: 400px;
     width: 50%;
-    margin:0 20px;                                                                      ;
+    margin:0 20px;    
+    padding:0;                                                              ;
 }
 form{
     background-color:white;
@@ -20,6 +21,7 @@ form{
     padding:10px 20px;
     width: 70%;
     padding-top: 30px;
+    margin:0px;
 }
 .form-col{
     padding: 10px;

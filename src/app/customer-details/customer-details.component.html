@@ -1,8 +1,17 @@
-<button mat-button (click)="openEditDialog()">
-    Customer Name: {{customer.name}}
-    Customer Email: {{customer.email}}
-    Edit Customer Details
-</button>
-<button mat-button (click)="openBusinessNumberEdit()">Business Phone Number: {{customer.phoneNumber}}</button>
-<button mat-button (click)="openLoginNumberEdit()">Login Phone Number: {{customer.loginNumber}}</button>
-<!--<button mat-button (click)="openDialog('password')">Change Password</button> -->
+<main>
+<div mat-div (click)="openBusinessNumberEdit()">
+    <div class="icon"><mat-icon>call</mat-icon></div>
+    <p>Business Phone Number: {{customer.phoneNumber}}</p>
+    <div class="icon"><mat-icon>edit</mat-icon></div>
+</div>
+<div mat-div (click)="openLoginNumberEdit()">
+    <div class="icon"><mat-icon>call</mat-icon></div>
+    <p>Login Phone Number: {{customer.phoneNumber}}</p>
+    <div class="icon"><mat-icon>edit</mat-icon></div>
+</div>
+<div mat-div (click)="openEditDialog()">
+    <div class="icon"><mat-icon>key</mat-icon></div>
+    <p style="margin-right:70px">Change Password</p>
+    <div class="icon"><mat-icon>edit</mat-icon></div>
+</div>
+</main>
