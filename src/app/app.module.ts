@@ -49,6 +49,8 @@ import { CustomerEditDialogComponent } from './customer-edit-dialog/customer-edi
 import { BusinessNumberEditComponent } from './dialogs/business-number-edit/business-number-edit.component';
 import { LoginNumberEditComponent } from './dialogs/login-number-edit/login-number-edit.component';
 import { PasswordEditComponent } from './dialogs/password-edit/password-edit.component';
+import { ProductServiceComponent } from './product-service/product-service.component';
+import { ProductServiceDisplayComponent } from './product-service-display/product-service-display.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +72,8 @@ import { PasswordEditComponent } from './dialogs/password-edit/password-edit.com
     BusinessNumberEditComponent,
     LoginNumberEditComponent,
     PasswordEditComponent,
+    ProductServiceComponent,
+    ProductServiceDisplayComponent,
   ],
   imports: [
     MatButtonToggleModule,

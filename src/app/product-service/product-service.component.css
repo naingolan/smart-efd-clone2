@@ -1,0 +1,22 @@
+form{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    margin:20px 0;
+    background-color: white;
+    padding:20px;
+    border:1px solid orange;
+    border-radius: 10px;
+}
+form:nth-child(3){
+    width: 45%;
+}
+.divider{
+    display: flex;
+    flex-direction: row;
+}
+.divider>div{
+    width: 50%;
+    margin-left:10% !important;
+    margin:20px;
+}

@@ -5,6 +5,7 @@ import { ReceiptGenaratorComponent } from './receipt-genarator/receipt-genarator
 import { ReceiptsComponent } from './receipts/receipts.component';
 import { ProfileComponent } from './profile/profile.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { ProductServiceComponent } from './product-service/product-service.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent }, // Home route
@@ -14,7 +15,8 @@ const routes: Routes = [
     path: 'profile',
     component: ProfileComponent,
     children: [
-      { path: 'user-profile', component: UserProfileComponent }
+      { path: 'user-profile', component: UserProfileComponent },
+      { path: 'products', component: ProductServiceComponent},
     ]
   }
 ];

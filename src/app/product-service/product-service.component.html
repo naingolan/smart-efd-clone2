@@ -1,0 +1,23 @@
+<main>
+    <h2>Product/Services</h2>
+    <div class="divider">
+        <form [formGroup]="productServiceForm" (ngSubmit)="saveProductService()">
+            <mat-form-field appearance="outline">
+              <mat-label>Product/Service</mat-label>
+              <input matInput formControlName="productService" placeholder="Enter Product/Service">
+            </mat-form-field>
+          
+            <mat-form-field appearance="outline">
+              <mat-label>Tax Group</mat-label>
+              <mat-select formControlName="taxGroup" (selectionChange)="onTaxGroupSelectionChange($event)">
+                <mat-option *ngFor="let group of taxGroups" [value]="group">{{ group }}</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <hr style="width:100%;margin:20px 0; color:black">
+            <button mat-raised-button color="primary" type="submit">Save</button>
+          </form>
+            <div>
+                <app-product-service-display></app-product-service-display>
+            </div>
+    </div>
+</main>
