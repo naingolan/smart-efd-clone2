@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { MatSelectChange } from '@angular/material/select';
-import { ProductService } from '../product.service';
+import { ProductService, Product } from '../product.service';
 
 @Component({
   selector: 'app-product-service',
@@ -25,7 +25,7 @@ export class ProductServiceComponent {
     const taxGroupValue = this.productServiceForm.value.taxGroup;
 
     // Create a new product object
-    const product = {
+    const product: Product = {
       name: productServiceValue,
       addedOn: new Date(),
       taxCategory: taxGroupValue

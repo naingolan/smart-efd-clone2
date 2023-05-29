@@ -1,13 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { FormControl } from '@angular/forms';
-import { ProductService } from '../product.service';
-
-interface Product {
-  name: string;
-  addedOn: Date;
-  taxCategory: string;
-}
+import { ProductService, Product } from '../product.service';
 
 @Component({
   selector: 'app-product-service-display',
@@ -15,7 +9,7 @@ interface Product {
   styleUrls: ['./product-service-display.component.css']
 })
 export class ProductServiceDisplayComponent implements OnInit {
-  displayedColumns: string[] = ['name', 'addedOn', 'taxCategory'];
+  displayedColumns: string[] = ['name', 'addedOn'];
   dataSource!: MatTableDataSource<Product>;
   searchControl: FormControl = new FormControl('');
 
@@ -24,15 +18,12 @@ export class ProductServiceDisplayComponent implements OnInit {
   ngOnInit(): void {
     this.dataSource = new MatTableDataSource<Product>(this.productService.getProductList());
 
-    // Filter the table based on the search input value
-    this.searchControl.valueChanges.subscribe(value => {
-      this.dataSource.filter = value.trim().toLowerCase();
+    this.productService.getProductAddedObservable().subscribe(() => {
+      this.dataSource.data = this.productService.getProductList();
     });
 
-    // Subscribe to changes in the product list
-    // Subscribe to changes in the product list
-    this.productService['productListChanged'].subscribe((products: Product[]) => {
-      this.dataSource.data = products;
+    this.searchControl.valueChanges.subscribe(value => {
+      this.dataSource.filter = value.trim().toLowerCase();
     });
   }
 }
