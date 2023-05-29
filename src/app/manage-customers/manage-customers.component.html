@@ -1,0 +1,39 @@
+<main>
+    <h2>Manage Customers</h2>
+    <div class="divider">
+        <form [formGroup]="manageCustomersServiceForm" (ngSubmit)="saveManageCustomers()">
+            <mat-form-field appearance="outline">
+              <mat-label>Name</mat-label>
+              <input matInput formControlName="customerName" placeholder="Customer Name">
+            </mat-form-field>
+            <div class="col">
+            <mat-form-field appearance="outline">
+                <mat-label>Phone Number</mat-label>
+                <input matInput formControlName="phoneNumber" placeholder="Customer Name">
+              </mat-form-field>
+
+              <mat-form-field appearance="outline">
+                <mat-label>TIN</mat-label>
+                <input matInput formControlName="TIN" placeholder="TIN">
+              </mat-form-field>
+            </div>
+            <div class="col">
+              <mat-form-field appearance="outline">
+                <mat-label>VRN</mat-label>
+                <input matInput formControlName="VRN" placeholder="VRN">
+              </mat-form-field>
+
+              <mat-form-field appearance="outline">
+                <mat-label>Address</mat-label>
+                <input matInput formControlName="customerAddress" placeholder="Address">
+              </mat-form-field>
+           </div>
+
+            <hr style="width:100%;margin:20px 0; color:black">
+            <button mat-raised-button color="primary" type="submit">Save</button>
+          </form>
+            <div>
+                <app-manage-customers-display></app-manage-customers-display>
+            </div>
+    </div>
+</main>

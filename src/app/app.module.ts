@@ -51,6 +51,8 @@ import { LoginNumberEditComponent } from './dialogs/login-number-edit/login-numb
 import { PasswordEditComponent } from './dialogs/password-edit/password-edit.component';
 import { ProductServiceComponent } from './product-service/product-service.component';
 import { ProductServiceDisplayComponent } from './product-service-display/product-service-display.component';
+import { ManageCustomersComponent } from './manage-customers/manage-customers.component';
+import { ManageCustomersDisplayComponent } from './manage-customers-display/manage-customers-display.component';
 
 @NgModule({
   declarations: [
@@ -74,6 +76,8 @@ import { ProductServiceDisplayComponent } from './product-service-display/produc
     PasswordEditComponent,
     ProductServiceComponent,
     ProductServiceDisplayComponent,
+    ManageCustomersComponent,
+    ManageCustomersDisplayComponent,
   ],
   imports: [
     MatButtonToggleModule,
