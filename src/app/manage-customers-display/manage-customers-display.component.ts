@@ -9,7 +9,7 @@ import { ManageCustomersService, Customers } from '../manage-customers.service';
   styleUrls: ['./manage-customers-display.component.css']
 })
 export class ManageCustomersDisplayComponent implements OnInit {
-  displayedColumns: string[] = ['customerName', 'phoneNumber','TIN', 'VRN' ];
+  displayedColumns: string[] = ['customerName', 'phoneNumber','TIN', 'actions'];
   dataSource!: MatTableDataSource<Customers>;
   searchControl: FormControl = new FormControl('');
 
@@ -26,4 +26,10 @@ export class ManageCustomersDisplayComponent implements OnInit {
       this.dataSource.filter = value.trim().toLowerCase();
     });
   }
+  deleteCustomer(customer:Customers) {
+    this.manageCustomersService.deleteCustomer(customer);
+  
+  }
 }
+
+

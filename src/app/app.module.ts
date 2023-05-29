@@ -53,6 +53,8 @@ import { ProductServiceComponent } from './product-service/product-service.compo
 import { ProductServiceDisplayComponent } from './product-service-display/product-service-display.component';
 import { ManageCustomersComponent } from './manage-customers/manage-customers.component';
 import { ManageCustomersDisplayComponent } from './manage-customers-display/manage-customers-display.component';
+import { PaymentsComponent } from './payments/payments.component';
+import { PaymentsDisplayComponent } from './payments-display/payments-display.component';
 
 @NgModule({
   declarations: [
@@ -78,6 +80,8 @@ import { ManageCustomersDisplayComponent } from './manage-customers-display/mana
     ProductServiceDisplayComponent,
     ManageCustomersComponent,
     ManageCustomersDisplayComponent,
+    PaymentsComponent,
+    PaymentsDisplayComponent,
   ],
   imports: [
     MatButtonToggleModule,

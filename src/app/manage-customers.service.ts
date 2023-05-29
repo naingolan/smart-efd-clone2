@@ -35,4 +35,13 @@ export class ManageCustomersService {
     this.customersList.push(customers);
     this.customersAddedSubject.next(); // Emit a value to notify subscribers that a new product was added
   }
+
+  deleteCustomer(customer: Customers): void {
+    const index = this.customersList.findIndex(c => c === customer);
+    if (index !== -1) {
+      this.customersList.splice(index, 1);
+      this.customersAddedSubject.next(); // Emit a value to notify subscribers that a customer was deleted
+    }
+  }
+  
 }
