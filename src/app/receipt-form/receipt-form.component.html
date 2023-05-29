@@ -1,59 +1,81 @@
 <!-- receipt-form.component.html -->
+<main>
 <div>
     <div><h2>Generate the Receipt</h2><div></div><div></div></div>
     <p>Fill in reeipt details to your receipt</p>
     <form (ngSubmit)="onSubmit()">
-        <div>
-      <label for="name">Product / Service</label>
-      <input type="text" id="product" name="product" [(ngModel)]="formData.product">
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="single" appearance="outline">
+            <mat-label class="single">Product / Service</mat-label>
+            <input class="single" matInput placeholder="Enter product or service" [(ngModel)]="formData.product" name="product">
+          </mat-form-field>
         </div>
-    <div>
-      <label for="Quatity">Quantity</label>
-      <input type="text" id="quantity" name="quantity" [(ngModel)]="formData.quantity">
-  
-      <label for="unit-price">Unit-Price</label>
-      <input type="text" id="phone" name="unit-price" [(ngModel)]="formData.unit-price">
-    </div>
-
-    <div>
-        <label for="name">Customer Name</label>
-        <input type="text" id="name" name="quantity" [(ngModel)]="formData.name">
-    
-        <label for="phone-number">Phone Number</label>
-        <input type="text" id="phonenumber" name="phonenumber" [(ngModel)]="formData.phonenumber">
       </div>
-
-
-    <div>
-        <label for="name">TIN</label>
-        <input type="text" id="name" name="quantity" [(ngModel)]="formData.tin">
     
-        <label for="phone-number">
-
-    <div>
-        <label for="name">Customer Name</label>
-        <input type="text" id="name" name="quantity" [(ngModel)]="formData.name">
-    
-        <label for="phone-number">Phone Number</label>
-        <input type="text" id="phonenumber" name="phonenumber" [(ngModel)]="formData.phonenumber">
-      </div></label>
-        <input type="text" id="phonenumber" name="phonenumber" [(ngModel)]="formData.vrn">
+      <div class="row double">
+        <div class="col">
+          <mat-form-field appearance="outline">
+            <mat-label>Quantity</mat-label>
+            <input matInput placeholder="Enter quantity" [(ngModel)]="formData.quantity" name="quantity">
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field appearance="outline">
+            <mat-label>Unit-Price</mat-label>
+            <input matInput placeholder="Enter unit price" [(ngModel)]="formData.unitPrice" name="unitPrice">
+          </mat-form-field>
+        </div>
       </div>
+    
+      <div class="row double">
+        <div class="col">
+          <mat-form-field appearance="outline">
+            <mat-label>Customer Name</mat-label>
+            <input matInput placeholder="Enter customer name" [(ngModel)]="formData.customerName" name="customerName">
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field appearance="outline">
+            <mat-label>Phone Number</mat-label>
+            <input matInput placeholder="Enter phone number" [(ngModel)]="formData.phoneNumber" name="phoneNumber">
+          </mat-form-field>
+        </div>
+      </div>
+    
+      <div class="row double">
+        <div class="col ">
+          <mat-form-field appearance="outline">
+            <mat-label>TIN</mat-label>
+            <input matInput placeholder="Enter TIN" [(ngModel)]="formData.tin" name="tin">
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field appearance="outline">
+            <mat-label>VRN</mat-label>
+            <input matInput placeholder="Enter VRN" [(ngModel)]="formData.vrn" name="vrn">
+          </mat-form-field>
+        </div>
+      </div>
+    
       <!-- Add other relevant form fields here -->
-  
-      <button type="submit">Preview Receipt</button>
+    
+      <button class="center" mat-raised-button color="primary" type="submit">Preview Receipt</button>
     </form>
+    
   </div>
   
   <div *ngIf="showPreview">
-    <h2>Receipt Preview</h2>
-    <button (click)="resetForm()">Edit</button>
-    <button (click)="generatePDF()">Download PDF</button>
     <div id="htmlData">
-      <p>Name: {{ formData.name }}</p>
-      <p>Email: {{ formData.email }}</p>
-      <p>Phone: {{ formData.phone }}</p>
+      <img src="assets/tra.png">
+      <p>Name: {{ formData.product }}</p>
+      <p>Email: {{ formData.quantity }}</p>
+      <p>Phone: {{ formData.unitPrice }}</p>
       <!-- Include other relevant receipt details here -->
     </div>
+    <div class="disp-button">
+    <button mat-raised-button color="primary" (click)="resetForm()">Edit</button>
+    <button mat-raised-button color="primary" (click)="generatePDF()">Download PDF</button>
+    </div>
   </div>
-  
+</main>

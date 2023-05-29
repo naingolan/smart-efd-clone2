@@ -40,8 +40,11 @@ import { HourlyChartComponent } from './hourly-chart/hourly-chart.component';
 import { TableComponent } from './table/table.component';
 import { ReceiptsComponent } from './receipts/receipts.component';
 import { ReceiptFormComponent } from './receipt-form/receipt-form.component';
-import { FormsModule } from '@angular/forms';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ProfileComponent } from './profile/profile.component';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { CustomerDetailsComponent } from './customer-details/customer-details.component';
 
 @NgModule({
   declarations: [
@@ -56,8 +59,12 @@ import { FormsModule } from '@angular/forms';
     TableComponent,
     ReceiptsComponent,
     ReceiptFormComponent,
+    ProfileComponent,
+    UserProfileComponent,
+    CustomerDetailsComponent,
   ],
   imports: [
+    MatButtonToggleModule,
     FormsModule,
     BrowserModule,
     AppRoutingModule,
@@ -75,9 +82,7 @@ import { FormsModule } from '@angular/forms';
     MatTabsModule,
     AgChartsAngularModule,
     ChartModule,
-
-
-
+    ReactiveFormsModule
   ],
   providers: [CategoryService, DateTimeService, ScrollBarService, LineSeriesService, ColumnSeriesService, 
     ChartAnnotationService, RangeColumnSeriesService, StackingColumnSeriesService, LegendService, TooltipService, ReportService, ReceiptGenaratorComponent],

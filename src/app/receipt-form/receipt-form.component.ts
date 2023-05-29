@@ -9,9 +9,13 @@ import html2canvas from 'html2canvas';
 })
 export class ReceiptFormComponent {
   formData = {
-    name: '',
-    email: '',
-    phone: ''
+    tin: '',
+    vrn: '',
+    product: '',
+    phoneNumber: '',
+    customerName:'',
+    quantity: '',
+    unitPrice:''
   };
 
   showPreview = false;
@@ -38,9 +42,13 @@ export class ReceiptFormComponent {
   resetForm() {
     this.showPreview = false;
     this.formData = {
-      name: '',
-      email: '',
-      phone: ''
+      tin: '',
+      vrn: '',
+      product: '',
+      phoneNumber: '',
+      customerName:'',
+      quantity: '',
+      unitPrice:''
     };
   }
 }

@@ -1,0 +1,30 @@
+main{
+  margin:10px;  
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  padding:0 20px;
+}
+.button-comp{
+    background-color: teal;
+    height: 400px;
+    width: 50%;
+    margin:0 20px;                                                                      ;
+}
+form{
+    background-color:white;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: orange;
+    border-style: solid;
+    padding:10px 20px;
+    width: 70%;
+    padding-top: 30px;
+}
+.form-col{
+    padding: 10px;
+}
+.single{
+    width: 96%;
+    margin-left:6px;
+}

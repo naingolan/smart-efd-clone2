@@ -1,0 +1,44 @@
+<main>
+<form [formGroup]="myForm">
+    <mat-form-field appearance="outline" class="single">
+      <mat-label>Company Name</mat-label>
+      <input matInput formControlName="companyName" placeholder="EVAS AUTOTRAVLE COMPANY LIMITED">
+    </mat-form-field>
+    <div class="form-row">
+      <mat-form-field appearance="outline" class="form-col">
+        <mat-label>TIM</mat-label>
+        <input matInput formControlName="tim" placeholder="128826791">
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="form-col">
+        <mat-label>VRN</mat-label>
+        <input matInput formControlName="vrn" placeholder="NOT REGISTERED">
+      </mat-form-field>
+    </div>
+    <div class="form-row">
+      <mat-form-field appearance="outline" class="form-col">
+        <mat-label>P.O.Box</mat-label>
+        <input matInput formControlName="poBox" placeholder="63314">
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="form-col">
+        <mat-label>Street</mat-label>
+        <input matInput formControlName="street" placeholder="DUNGA">
+      </mat-form-field>
+    </div>
+    <div class="form-row">
+      <mat-form-field appearance="outline" class="form-col">
+        <mat-label>Region</mat-label>
+        <input matInput formControlName="region" placeholder="DAR ES SALAAM">
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="form-col">
+        <mat-label>Country</mat-label>
+        <input matInput formControlName="country" placeholder="TANZANIA">
+      </mat-form-field>
+    </div>
+  </form>
+  <div class="button-comp">
+        <button mat-button (click)="customerDetailsComponent.openEditDialog()">
+          <mat-icon>person</mat-icon> Edit Customer Details
+        </button>
+ </div>  
+</main>
+  
