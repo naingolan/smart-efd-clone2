@@ -1,49 +1,8 @@
-<!-- <mat-tab-group>
-    <mat-tab>
-      <ng-template mat-tab-label>
-        <mat-icon>person</mat-icon>
-        <span>Customer Details</span>
-      </ng-template>
-      <div class="customer-details">
-        <div class="details-header">
-          <div class="details-info">
-            <mat-icon>person</mat-icon>
-            <span>{{ customer.name }}</span>
-          </div>
-          <button mat-icon-button (click)="openEditDialog()">
-            <mat-icon>edit</mat-icon>
-          </button>
-        </div>
-        <div class="details-body">
-          <div class="detail-item">
-            <span>Phone Number:</span>
-            <span>{{ customer.phoneNumber }}</span>
-          </div>
-          <div class="detail-item">
-            <span>Email:</span>
-            <span>{{ customer.email }}</span>
-          </div>
-        </div>
-      </div>
-    </mat-tab>
-  </mat-tab-group>
-  
-  <ng-template #editDialog>
-    <h2>Edit Customer Details</h2>
-    <mat-form-field>
-      <mat-label>Phone Number</mat-label>
-      <input matInput [(ngModel)]="editPhoneNumber" placeholder="{{ customer.phoneNumber }}">
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Email</mat-label>
-      <input matInput [(ngModel)]="editEmail" placeholder="{{ customer.email }}">
-    </mat-form-field>
-    <div class="dialog-buttons">
-      <button mat-button (click)="saveChanges()">Save</button>
-      <button mat-button (click)="cancelEdit()">Cancel</button>
-    </div>
-  </ng-template>
-   -->
-
-
-   <h1>Hello Its me</h1>
+<button mat-button (click)="openEditDialog()">
+    Customer Name: {{customer.name}}
+    Customer Email: {{customer.email}}
+    Edit Customer Details
+</button>
+<button mat-button (click)="openBusinessNumberEdit()">Business Phone Number: {{customer.phoneNumber}}</button>
+<button mat-button (click)="openLoginNumberEdit()">Login Phone Number: {{customer.loginNumber}}</button>
+<!--<button mat-button (click)="openDialog('password')">Change Password</button> -->

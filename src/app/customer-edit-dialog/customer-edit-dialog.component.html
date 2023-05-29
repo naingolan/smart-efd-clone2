@@ -1,0 +1,18 @@
+<h2 mat-dialog-title>Edit Customer Details</h2>
+<mat-dialog-content>
+  <form>
+    <mat-form-field>
+      <input matInput placeholder="Name" [(ngModel)]="customer.name" name="name">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Phone Number" [(ngModel)]="customer.phoneNumber" name="phoneNumber">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Email" [(ngModel)]="customer.email" name="email">
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="saveChanges()">Save</button>
+  <button mat-button (click)="cancelEdit()">Cancel</button>
+</mat-dialog-actions>

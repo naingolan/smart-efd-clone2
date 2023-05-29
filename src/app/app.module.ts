@@ -11,7 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
@@ -45,6 +45,10 @@ import { ProfileComponent } from './profile/profile.component';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { CustomerDetailsComponent } from './customer-details/customer-details.component';
+import { CustomerEditDialogComponent } from './customer-edit-dialog/customer-edit-dialog.component';
+import { BusinessNumberEditComponent } from './dialogs/business-number-edit/business-number-edit.component';
+import { LoginNumberEditComponent } from './dialogs/login-number-edit/login-number-edit.component';
+import { PasswordEditComponent } from './dialogs/password-edit/password-edit.component';
 
 @NgModule({
   declarations: [
@@ -62,6 +66,10 @@ import { CustomerDetailsComponent } from './customer-details/customer-details.co
     ProfileComponent,
     UserProfileComponent,
     CustomerDetailsComponent,
+    CustomerEditDialogComponent,
+    BusinessNumberEditComponent,
+    LoginNumberEditComponent,
+    PasswordEditComponent,
   ],
   imports: [
     MatButtonToggleModule,
@@ -82,7 +90,8 @@ import { CustomerDetailsComponent } from './customer-details/customer-details.co
     MatTabsModule,
     AgChartsAngularModule,
     ChartModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDialogModule,
   ],
   providers: [CategoryService, DateTimeService, ScrollBarService, LineSeriesService, ColumnSeriesService, 
     ChartAnnotationService, RangeColumnSeriesService, StackingColumnSeriesService, LegendService, TooltipService, ReportService, ReceiptGenaratorComponent],
