@@ -36,6 +36,16 @@ export class LanguageService {
         return 'Home';
       case 'Report':
         return 'Report';
+      case 'Receipt':
+        return 'Receipt';
+      case 'Invoice':
+        return 'Invoice';
+      case 'VFD Accounts':
+        return 'VFD Accounts';
+      case 'Profile':
+        return  'Profile';
+      case 'Admin Dashboard':
+        return 'Admin Dashboard';
       // Add more translations here
       default:
         return '';
@@ -50,6 +60,14 @@ export class LanguageService {
         return 'Ripoti';
       case 'Invoice':
         return 'Invoice';
+      case 'Receipt':
+        return 'Risiti';
+      case 'Profile':
+        return 'Wasifu';
+      case 'VFD Accounts':
+        return 'Akaunti za VFD';
+      case 'Admin Dashboard':
+        return 'Dashbodi ya Admin';
       
       // Add more translations here
       default:

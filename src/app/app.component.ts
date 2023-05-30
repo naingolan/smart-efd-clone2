@@ -23,7 +23,7 @@ export class AppComponent  implements OnInit, AfterViewInit {
   invoiceText!: string;
   VFDAccountsText!: string;
   profileText!: string;
-  adminDashboard!: string;
+  adminDashboardText!: string;
   constructor(private breakpointObserver: BreakpointObserver, private languageService: LanguageService) {}
   ngAfterViewInit(): void {
     throw new Error('Method not implemented.');
@@ -42,7 +42,7 @@ export class AppComponent  implements OnInit, AfterViewInit {
           this.invoiceText = this.languageService.translate('Invoice');
           this.VFDAccountsText = this.languageService.translate('VFD Accounts');
           this.profileText = this.languageService.translate('Profile');
-          this.adminDashboard = this.languageService.translate('Admin Dashboard')
+          this.adminDashboardText = this.languageService.translate('Admin Dashboard')
         });
   }
 
