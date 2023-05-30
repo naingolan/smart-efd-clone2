@@ -7,6 +7,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { ProductServiceComponent } from './product-service/product-service.component';
 import { ManageCustomersComponent } from './manage-customers/manage-customers.component';
+import { PaymentsComponent } from './payments/payments.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent }, // Home route
@@ -19,6 +20,7 @@ const routes: Routes = [
       { path: 'user-profile', component: UserProfileComponent },
       { path: 'products', component: ProductServiceComponent},
       { path: 'customers', component:ManageCustomersComponent},
+      { path: 'payments', component: PaymentsComponent},
     ]
   }
 ];

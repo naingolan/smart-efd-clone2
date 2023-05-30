@@ -1,1 +1,30 @@
-<p>payments works!</p>
+<main>
+    <h2>Product/Services</h2>
+    <div class="divider">
+      <form [formGroup]="paymentForm" (ngSubmit)="savePayment()">
+        <mat-form-field appearance="outline">
+          <mat-label>Payment Method</mat-label>
+          <input matInput formControlName="paymentMethod" placeholder="Enter Payment Method">
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline">
+          <mat-label>Account Number</mat-label>
+          <input matInput formControlName="accountNumber" placeholder="Enter Account Number">
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline">
+          <mat-label>Account Name</mat-label>
+          <input matInput formControlName="accountName" placeholder="Enter Account Name">
+        </mat-form-field>
+  
+        <hr style="width:100%;margin:20px 0; color:black">
+  
+        <button mat-raised-button color="primary" type="submit">Save</button>
+      </form>
+  
+      <div>
+        <app-payments-display></app-payments-display>
+      </div>
+    </div>
+  </main>
+  
