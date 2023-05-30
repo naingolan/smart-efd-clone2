@@ -28,7 +28,6 @@ export class ManageCustomersDisplayComponent implements OnInit {
   }
   deleteCustomer(customer:Customers) {
     this.manageCustomersService.deleteCustomer(customer);
-  
   }
 }
 
