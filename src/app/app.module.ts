@@ -55,6 +55,21 @@ import { ManageCustomersComponent } from './manage-customers/manage-customers.co
 import { ManageCustomersDisplayComponent } from './manage-customers-display/manage-customers-display.component';
 import { PaymentsComponent } from './payments/payments.component';
 import { PaymentsDisplayComponent } from './payments-display/payments-display.component';
+import { SearchReportComponent } from './search-report/search-report.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { LanguageSelectionComponent } from './language-selection/language-selection.component';
+
+//These aer for language selection
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+
+//
+
+export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -82,8 +97,19 @@ import { PaymentsDisplayComponent } from './payments-display/payments-display.co
     ManageCustomersDisplayComponent,
     PaymentsComponent,
     PaymentsDisplayComponent,
+    SearchReportComponent,
+    LanguageSelectionComponent,
   ],
   imports: [
+    HttpClientModule,
+    TranslateModule.forRoot({
+      defaultLanguage: 'en',
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
     MatButtonToggleModule,
     FormsModule,
     BrowserModule,
@@ -104,6 +130,8 @@ import { PaymentsDisplayComponent } from './payments-display/payments-display.co
     ChartModule,
     ReactiveFormsModule,
     MatDialogModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [CategoryService, DateTimeService, ScrollBarService, LineSeriesService, ColumnSeriesService, 
     ChartAnnotationService, RangeColumnSeriesService, StackingColumnSeriesService, LegendService, TooltipService, ReportService, ReceiptGenaratorComponent],

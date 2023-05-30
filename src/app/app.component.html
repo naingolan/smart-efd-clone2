@@ -5,11 +5,11 @@
         <img src="assets/smartefd.png">
         <a routerLink="/" mat-list-item class="nav-list-item" routerLink="/home" routerLinkActive="active-link">
           <mat-icon class="nav-list-icon">home</mat-icon>
-          <span class="nav-list-text">Home</span>
+          <span id="homeMenuItem" class="nav-list-text">{{homeText}}</span>
         </a>
         <a mat-list-item class="nav-list-item" routerLink="/receipt">
           <mat-icon class="nav-list-icon">receipt</mat-icon>
-          <span class="nav-list-text">Receipt</span>
+          <span class="nav-list-text">{{reportText}}</span>
         </a>
         <a mat-list-item class="nav-list-item" routerLink="/report">
           <mat-icon class="nav-list-icon">bar_chart</mat-icon>
@@ -41,6 +41,7 @@
   <button mat-icon-button (click)="openLanguageOptions()">
     <mat-icon>language</mat-icon>
   </button>
+  <app-language-selection></app-language-selection>
   <button mat-icon-button (click)="openUserOptions()">
     <mat-icon>account_circle</mat-icon>
   </button>

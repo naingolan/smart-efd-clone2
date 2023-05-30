@@ -8,10 +8,12 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { ProductServiceComponent } from './product-service/product-service.component';
 import { ManageCustomersComponent } from './manage-customers/manage-customers.component';
 import { PaymentsComponent } from './payments/payments.component';
+import { SearchReportComponent } from './search-report/search-report.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent }, // Home route
   { path: 'receipt', component: ReceiptsComponent },
+  { path: 'report', component: SearchReportComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' }, // Redirect to Home component
   {
     path: 'profile',
