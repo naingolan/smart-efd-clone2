@@ -9,12 +9,14 @@ import { ProductServiceComponent } from './product-service/product-service.compo
 import { ManageCustomersComponent } from './manage-customers/manage-customers.component';
 import { PaymentsComponent } from './payments/payments.component';
 import { SearchReportComponent } from './search-report/search-report.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent }, // Home route
   { path: 'receipt', component: ReceiptsComponent },
   { path: 'report', component: SearchReportComponent},
-  { path: '', redirectTo: 'home', pathMatch: 'full' }, // Redirect to Home component
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'register', component: RegistrationComponent} ,// Redirect to Home component
   {
     path: 'profile',
     component: ProfileComponent,

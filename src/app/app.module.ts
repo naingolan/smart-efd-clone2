@@ -64,6 +64,7 @@ import { LanguageSelectionComponent } from './language-selection/language-select
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { RegistrationComponent } from './registration/registration.component';
 
 //
 
@@ -99,6 +100,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     PaymentsDisplayComponent,
     SearchReportComponent,
     LanguageSelectionComponent,
+    RegistrationComponent,
   ],
   imports: [
     HttpClientModule,
