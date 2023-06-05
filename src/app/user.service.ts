@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, tap } from 'rxjs';
+import { BehaviorSubject, Observable, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
   private userData: any;
+  private userCreated = new BehaviorSubject<boolean>(false);
 
   constructor(private http: HttpClient) { }
 
@@ -20,6 +21,16 @@ export class UserService {
     );
   }
   
+//which page to load first
+
+  createdSignature(): Observable<boolean> {
+    return this.userCreated.asObservable();
+  }
+
+  // Function to update the login status
+  updateUserCreatedStatus(isLogged: boolean): void {
+    this.userCreated.next(isLogged);
+  }
   // Get the stored user data
   getUserData(): any {
     return this.userData;

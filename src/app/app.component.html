@@ -1,57 +1,63 @@
-<main>
-  <mat-drawer-container class="container">
-    <mat-drawer #sidenav [mode]="isScreenSmall ? 'over' : 'side'" [opened]="!isScreenSmall">
-      <mat-nav-list class="nav-list">
-        <img src="assets/smartefd.png">
-        <a routerLink="/" mat-list-item class="nav-list-item" routerLink="/home" routerLinkActive="active-link">
-          <mat-icon class="nav-list-icon">home</mat-icon>
-          <span id="homeMenuItem" class="nav-list-text">{{homeText}}</span>
-        </a>
-        <a mat-list-item class="nav-list-item" routerLink="/receipt">
-          <mat-icon class="nav-list-icon">receipt</mat-icon>
-          <span class="nav-list-text">{{receiptText}}</span>
-        </a>
-        <a mat-list-item class="nav-list-item" routerLink="/report">
-          <mat-icon class="nav-list-icon">bar_chart</mat-icon>
-          <span class="nav-list-text">{{reportText}}</span>
-        </a>
-        <a mat-list-item class="nav-list-item" routerLink="/invoice">
-            <mat-icon class="nav-list-icon">description</mat-icon>
-            <span class="nav-list-text">{{invoiceText}}</span>
-        </a>
-        <a mat-list-item class="nav-list-item" routerLink="/accounts">
-          <mat-icon class="nav-list-icon">account_balance</mat-icon>
-          <span class="nav-list-text">{{VFDAccountsText}}</span>
-        </a>
-        <a mat-list-item class="nav-list-item" routerLink="/profile">
-          <mat-icon class="nav-list-icon">person</mat-icon>
-          <span class="nav-list-text">{{profileText}}</span>
-        </a>
-        <a mat-list-item class="nav-list-item" routerLink="/admin-dashboard">
-          <mat-icon class="nav-list-icon">admin_panel_settings</mat-icon>
-          <span class="nav-list-text">{{adminDashboardText}}</span>
-        </a>
-        <a mat-list-item class="nav-list-item" routerLink="/register">
-          <mat-icon class="nav-list-icon">admin_panel_settings</mat-icon>
-          <span class="nav-list-text">Register</span>
-        </a>
-      </mat-nav-list>
-    </mat-drawer>
-<mat-toolbar color="primary">
-  <button mat-icon-button (click)="sidenav.toggle()">
-    <mat-icon >menu</mat-icon>
-  </button>
-  <span class="spacer"></span>
-  <button mat-icon-button [matMenuTriggerFor]="languageMenu"><mat-icon>language</mat-icon></button>
-  <mat-menu #languageMenu="matMenu">
-  <app-language-selection></app-language-selection>
-</mat-menu>
-  <button mat-icon-button (click)="openUserOptions()">
-    <mat-icon>account_circle</mat-icon>
-  </button>
-</mat-toolbar>
-<div class="content">
-  <router-outlet></router-outlet>
-</div>
-</mat-drawer-container>
-</main>
+<ng-container *ngIf="isLoggedIn; else registration">
+  <main>
+    <mat-drawer-container class="container">
+      <mat-drawer #sidenav [mode]="isScreenSmall ? 'over' : 'side'" [opened]="!isScreenSmall">
+        <mat-nav-list class="nav-list">
+          <img src="assets/smartefd.png">
+          <a routerLink="/" mat-list-item class="nav-list-item" routerLink="/home" routerLinkActive="active-link">
+            <mat-icon class="nav-list-icon">home</mat-icon>
+            <span id="homeMenuItem" class="nav-list-text">{{homeText}}</span>
+          </a>
+          <a mat-list-item class="nav-list-item" routerLink="/receipt">
+            <mat-icon class="nav-list-icon">receipt</mat-icon>
+            <span class="nav-list-text">{{receiptText}}</span>
+          </a>
+          <a mat-list-item class="nav-list-item" routerLink="/report">
+            <mat-icon class="nav-list-icon">bar_chart</mat-icon>
+            <span class="nav-list-text">{{reportText}}</span>
+          </a>
+          <a mat-list-item class="nav-list-item" routerLink="/invoice">
+              <mat-icon class="nav-list-icon">description</mat-icon>
+              <span class="nav-list-text">{{invoiceText}}</span>
+          </a>
+          <a mat-list-item class="nav-list-item" routerLink="/accounts">
+            <mat-icon class="nav-list-icon">account_balance</mat-icon>
+            <span class="nav-list-text">{{VFDAccountsText}}</span>
+          </a>
+          <a mat-list-item class="nav-list-item" routerLink="/profile">
+            <mat-icon class="nav-list-icon">person</mat-icon>
+            <span class="nav-list-text">{{profileText}}</span>
+          </a>
+          <a mat-list-item class="nav-list-item" routerLink="/admin-dashboard">
+            <mat-icon class="nav-list-icon">admin_panel_settings</mat-icon>
+            <span class="nav-list-text">{{adminDashboardText}}</span>
+          </a>
+          <a mat-list-item class="nav-list-item" routerLink="/register">
+            <mat-icon class="nav-list-icon">admin_panel_settings</mat-icon>
+            <span class="nav-list-text">Register</span>
+          </a>
+        </mat-nav-list>
+      </mat-drawer>
+  <mat-toolbar color="primary">
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon >menu</mat-icon>
+    </button>
+    <span class="spacer"></span>
+    <button mat-icon-button [matMenuTriggerFor]="languageMenu"><mat-icon>language</mat-icon></button>
+    <mat-menu #languageMenu="matMenu">
+    <app-language-selection></app-language-selection>
+  </mat-menu>
+    <button mat-icon-button (click)="openUserOptions()">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+  </mat-toolbar>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+  </mat-drawer-container>
+  </main>
+</ng-container>
+
+<ng-template #registration>
+  <app-registration></app-registration>
+</ng-template>

@@ -3,6 +3,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { map } from 'rxjs/operators';
 import { MatSidenav } from '@angular/material/sidenav';
 import { LanguageService } from './language-service.service';
+import { UserService } from './user.service';
 
 
 @Component({
@@ -24,12 +25,20 @@ export class AppComponent  implements OnInit, AfterViewInit {
   VFDAccountsText!: string;
   profileText!: string;
   adminDashboardText!: string;
-  constructor(private breakpointObserver: BreakpointObserver, private languageService: LanguageService) {}
+  isLoggedIn: any;
+  constructor(
+    private breakpointObserver: BreakpointObserver, 
+    private languageService: LanguageService,
+    private userService: UserService,
+    ) {}
   ngAfterViewInit(): void {
     throw new Error('Method not implemented.');
   }
 
   ngOnInit() {
+    this.userService.createdSignature().subscribe((isLogged: boolean) => {
+      this.isLoggedIn = isLogged;
+    });
     this.breakpointObserver.observe([Breakpoints.Small])
       .subscribe(result => {
         this.isScreenSmall = result.matches;
@@ -45,6 +54,7 @@ export class AppComponent  implements OnInit, AfterViewInit {
           this.adminDashboardText = this.languageService.translate('Admin Dashboard')
         });
   }
+  
 
   toggleSidebar() {
     if (this.isSmallScreen) {

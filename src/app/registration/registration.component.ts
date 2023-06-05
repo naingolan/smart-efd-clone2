@@ -46,9 +46,10 @@ export class RegistrationComponent implements OnInit {
     console.log(userData);
     this.http.post<RegistrationResponse>('http://localhost:3000/api/users/register', userData).subscribe(
       (response) => {
+        this.userService.updateUserCreatedStatus(true);
+
         console.log('User registered successfully:', response);
         const userId = response.userId; // Access the userId from the response
-        
         this.userService.fetchUserData(userId).subscribe(
           (userData) => {
             console.log('User data fetched successfully:', userData);
