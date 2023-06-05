@@ -16,7 +16,6 @@ const routes: Routes = [
   { path: 'receipt', component: ReceiptsComponent },
   { path: 'report', component: SearchReportComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'register', component: RegistrationComponent} ,// Redirect to Home component
   {
     path: 'profile',
     component: ProfileComponent,

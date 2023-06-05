@@ -4,6 +4,7 @@ import { map } from 'rxjs/operators';
 import { MatSidenav } from '@angular/material/sidenav';
 import { LanguageService } from './language-service.service';
 import { UserService } from './user.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -30,6 +31,7 @@ export class AppComponent  implements OnInit, AfterViewInit {
     private breakpointObserver: BreakpointObserver, 
     private languageService: LanguageService,
     private userService: UserService,
+    private router:Router
     ) {}
   ngAfterViewInit(): void {
     throw new Error('Method not implemented.');
@@ -54,22 +56,19 @@ export class AppComponent  implements OnInit, AfterViewInit {
           this.adminDashboardText = this.languageService.translate('Admin Dashboard')
         });
   }
+  openUserOptions(): void {
+    localStorage.removeItem('authToken');
+    this.userService.updateUserCreatedStatus(false);
+    this.router.navigate(['/home']);
+  }
   
-
   toggleSidebar() {
     if (this.isSmallScreen) {
       this.sidenav.toggle();
     }
   }
 
-  openLanguageOptions(): void {
-   // this.dialog.open(LanguageOptionsComponent);
-  }
-
-  openUserOptions(): void {
-    //this.dialog.open(UserOptionsComponent);
-  }
-  
+ 
 }
 
 

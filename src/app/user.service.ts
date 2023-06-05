@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject, Observable, tap } from 'rxjs';
+import { BehaviorSubject, Observable, of, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -21,11 +21,16 @@ export class UserService {
     );
   }
   
-//which page to load first
 
-  createdSignature(): Observable<boolean> {
+createdSignature(): Observable<boolean> {
+  const token = localStorage.getItem('authToken');
+  if (token) {
+    return of(true);
+  } else {
     return this.userCreated.asObservable();
   }
+}
+
 
   // Function to update the login status
   updateUserCreatedStatus(isLogged: boolean): void {
@@ -35,4 +40,22 @@ export class UserService {
   getUserData(): any {
     return this.userData;
   }
+
+  //create random token generator
+    
+  // Generate a token of length 32
+
+  generateToken(length: number) {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const charactersLength = characters.length;
+    let token = '';
+  
+    for (let i = 0; i < length; i++) {
+      const randomIndex = Math.floor(Math.random() * charactersLength);
+      token += characters.charAt(randomIndex);
+    }
+  
+    return token;
+  }
+  
 }
