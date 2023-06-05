@@ -58,6 +58,7 @@ export class AppComponent  implements OnInit, AfterViewInit {
   }
   openUserOptions(): void {
     localStorage.removeItem('authToken');
+    localStorage.removeItem('uuid');
     this.userService.updateUserCreatedStatus(false);
     this.router.navigate(['/home']);
   }

@@ -52,12 +52,15 @@ export class RegistrationComponent implements OnInit {
         localStorage.setItem('authToken', token);
 
         console.log('User registered successfully:', response);
-        const userId = response.userId; // Access the userId from the response
-
+        const userIdTemp = response.userId; // Access the userId from the response
+        localStorage.setItem('uuid', userIdTemp);
+        const userId = localStorage.getItem('uuid')??"";
         this.userService.fetchUserData(userId).subscribe(
           (userData) => {
             console.log('User data fetched successfully:', userData);
             // Store user data in the service or local storage for access across components
+            this.userService.userData = userData; // Assign the userData to the userData property of the userService
+
           })
         this.router.navigate(['/Home'], { queryParams: { userId } }); // Pass the userId as a query parameter to the home route
         

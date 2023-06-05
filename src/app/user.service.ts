@@ -6,7 +6,8 @@ import { BehaviorSubject, Observable, of, tap } from 'rxjs';
   providedIn: 'root'
 })
 export class UserService {
-  private userData: any;
+  
+  userData: any;
   private userCreated = new BehaviorSubject<boolean>(false);
 
   constructor(private http: HttpClient) { }

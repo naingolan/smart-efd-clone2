@@ -16,12 +16,7 @@ export class HomeComponent {
     ) { }
 
   ngOnInit() {
-    this.route.queryParams.subscribe(params => {
-      this.userId = params['userId'];
-      console.log('User ID:', this.userId);
-      this.userName = this.userService.getUserData().user.username;
-      // Use the userId to fetch the user data or perform any other logic
-    });
+      this.userName = this.userService.userData().user.username;
   }
   
 }
