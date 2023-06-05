@@ -1,6 +1,32 @@
 main{
     position:absolute;
-    width:100vh !important;
-    height:100vw !important;
-    background-color:yellow
+    top:0;
+    left:0;
+    bottom:0;
+    width:100vw!important;
+    height:100%!important;
+    background-color:white;
+}
+main>form{
+    position:relative;
+    margin: 5% 30%;
+    border:1px solid orange;
+    border-radius:10px;
+    padding:3%;
+}
+main>form{
+    display: flex;
+    flex-direction:column;
+}
+button{
+    width:30%;
+    margin: 2% auto;
+}
+a{
+    text-decoration:none;
+    color:orange;
+    margin: 2% auto;
+}
+a:hover{
+    color:darkorange;
 }

@@ -1,7 +1,12 @@
 main {
   height: 100vh;
   background-color: red;
-  width: 100vw;
+  width: 100%;
+}
+ng-template, ng-container {
+  height:100vh !important;
+  width:100% !important;
+  background-color: red;
 }
 
 .container {

@@ -1,35 +1,36 @@
 <main>
 <form [formGroup]="registrationForm" (submit)="register()">
-  <mat-form-field appearance="fill">
+  <mat-form-field appearance="outline">
     <mat-label>Username</mat-label>
     <input matInput formControlName="username">
   </mat-form-field>
 
-  <mat-form-field appearance="fill">
+  <mat-form-field appearance="outline">
     <mat-label>Password</mat-label>
     <input matInput formControlName="password" type="password">
   </mat-form-field>
 
-  <mat-form-field appearance="fill">
+  <mat-form-field appearance="outline">
     <mat-label>Email</mat-label>
     <input matInput formControlName="email" type="email">
   </mat-form-field>
 
-  <mat-form-field appearance="fill">
+  <mat-form-field appearance="outline">
     <mat-label>Phone Number</mat-label>
     <input matInput formControlName="phoneNumber">
   </mat-form-field>
 
-  <mat-form-field appearance="fill">
+  <mat-form-field appearance="outline">
     <mat-label>TIN Number</mat-label>
     <input matInput formControlName="tinNumber">
   </mat-form-field>
 
-  <mat-form-field appearance="fill">
+  <mat-form-field appearance="outline">
     <mat-label>VRN</mat-label>
     <input matInput formControlName="vrn">
   </mat-form-field>
 
   <button mat-raised-button color="primary" type="submit">Register</button>
+  <a href="/login" >Have an account? Login</a>
 </form>
 </main>
