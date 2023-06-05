@@ -49,12 +49,12 @@ export class RegistrationComponent implements OnInit {
         console.log('User registered successfully:', response);
         const userId = response.userId; // Access the userId from the response
         
-        this.userService.fetchUserData().subscribe(
+        this.userService.fetchUserData(userId).subscribe(
           (userData) => {
             console.log('User data fetched successfully:', userData);
             // Store user data in the service or local storage for access across components
           })
-        this.router.navigate(['/home'], { queryParams: { userId } }); // Pass the userId as a query parameter to the home route
+        this.router.navigate(['/Home'], { queryParams: { userId } }); // Pass the userId as a query parameter to the home route
         
         // Add any success handling or navigation logic here
       },

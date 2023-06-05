@@ -7,10 +7,9 @@ import { LanguageService } from '../language-service.service';
   styleUrls: ['./language-selection.component.css']
 })
 export class LanguageSelectionComponent {
-  selectedLanguage!: string;
+  selectedLanguage: string = 'EN'
 
   constructor(private languageService: LanguageService) { }
-
   updateLanguage(): void {
     this.languageService.updateLanguage(this.selectedLanguage);
   }

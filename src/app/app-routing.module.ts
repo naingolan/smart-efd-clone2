@@ -21,6 +21,7 @@ const routes: Routes = [
     path: 'profile',
     component: ProfileComponent,
     children: [
+      { path: '', redirectTo: 'user-profile', pathMatch: 'full' }, 
       { path: 'user-profile', component: UserProfileComponent },
       { path: 'products', component: ProductServiceComponent},
       { path: 'customers', component:ManageCustomersComponent},

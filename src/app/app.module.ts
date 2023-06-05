@@ -66,6 +66,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { RegistrationComponent } from './registration/registration.component';
 
+
 //
 
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
@@ -133,7 +134,8 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     ReactiveFormsModule,
     MatDialogModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatMenuModule
   ],
   providers: [CategoryService, DateTimeService, ScrollBarService, LineSeriesService, ColumnSeriesService, 
     ChartAnnotationService, RangeColumnSeriesService, StackingColumnSeriesService, LegendService, TooltipService, ReportService, ReceiptGenaratorComponent],

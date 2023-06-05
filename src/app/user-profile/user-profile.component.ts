@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CustomerDetailsComponent } from '../customer-details/customer-details.component';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-user-profile-component',
@@ -11,9 +12,13 @@ export class UserProfileComponent implements OnInit {
   @ViewChild(CustomerDetailsComponent)
   customerDetailsComponent!: CustomerDetailsComponent;
   
-  myForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  
+  myForm: FormGroup;
+  userData: any;
+  email:String =  '';
+
+  constructor(private fb: FormBuilder, private userService: UserService) {
     this.myForm = this.fb.group({
       companyName: ['EVAS AUTOTRAVLE COMPANY LIMITED', Validators.required],
       tim: ['128826791', Validators.required],
@@ -26,5 +31,8 @@ export class UserProfileComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.userData = this.userService.getUserData();
+    this.email= this.userData.user.email;
+    console.log(this.userData)
   }
 }

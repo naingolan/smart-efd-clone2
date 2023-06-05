@@ -42,10 +42,10 @@
     <mat-icon >menu</mat-icon>
   </button>
   <span class="spacer"></span>
-  <button mat-icon-button (click)="openLanguageOptions()">
-    <mat-icon>language</mat-icon>
-  </button>
+  <button mat-icon-button [matMenuTriggerFor]="languageMenu"><mat-icon>language</mat-icon></button>
+  <mat-menu #languageMenu="matMenu">
   <app-language-selection></app-language-selection>
+</mat-menu>
   <button mat-icon-button (click)="openUserOptions()">
     <mat-icon>account_circle</mat-icon>
   </button>
